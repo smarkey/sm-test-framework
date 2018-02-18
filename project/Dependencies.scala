@@ -16,10 +16,12 @@ trait TestDependencies {
   private[this] val scalatestVersion = "3.0.5"
   private[this] val scalacheckVersion = "1.13.5"
   private[this] val seleniumVersion = "3.9.1"
+  private[this] val pegdownVersion = "1.6.0"
 
   lazy val scalatest = "org.scalatest" %% "scalatest" % scalatestVersion
   lazy val scalacheck = "org.scalacheck" %% "scalacheck" % scalacheckVersion
   lazy val selenium = "org.seleniumhq.selenium" % "selenium-java" % seleniumVersion
+  lazy val pegdown = "org.pegdown" % "pegdown" % pegdownVersion
 }
 
 trait LoggingDependencies {
