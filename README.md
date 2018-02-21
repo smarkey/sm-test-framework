@@ -13,8 +13,11 @@ version compatible with Selenium `3.9.1` will suffice)
      
 ## Usage
 
-The following will run all gherkin features/scenarios tagged with `@ui`. The terminal output will be colourful and the
+The following will run the end to end UI tests (all gherkin features/scenarios tagged with `@ui`). The terminal output will be colourful and the
 results will be presented in 3 formats: `html`, `json` & `xml`
     
     sbt compile 'run --tags @ui --plugin pretty --plugin junit:junitresults/junit_outcome.xml --plugin json:jsonresults/json_outcome.json --plugin html:htmlresults/ --glue com.stevenm classpath:feature'
+    
+The following will run the API unit tests:    
 
+    sbt clean compile test

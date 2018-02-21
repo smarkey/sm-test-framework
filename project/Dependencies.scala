@@ -1,6 +1,6 @@
 import sbt._
 
-object Dependencies extends CucumberDependencies with TestDependencies with LoggingDependencies {
+object Dependencies extends CucumberDependencies with TestDependencies with LoggingDependencies with ApiDependencies {
   def inCompile(modules: ModuleID*): Seq[ModuleID] = modules.map(_ % Compile)
 }
 
@@ -34,4 +34,10 @@ trait LoggingDependencies {
     "ch.qos.logback" % "logback-classic" % logbackVersion,
     "org.codehaus.groovy" % "groovy" % groovyVersion
   )
+}
+
+trait ApiDependencies {
+  private[this] val cornichonVersion = "0.15.2"
+
+  lazy val cornichon = "com.github.agourlay" %% "cornichon" % cornichonVersion
 }

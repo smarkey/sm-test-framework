@@ -7,7 +7,7 @@ version := "0.1"
 scalaVersion := "2.12.4"
 scalacOptions ++= List("-feature", "-deprecation", "-unchecked", "-Xlint")
 
-lazy val uiDependencies = logging ++ inCompile(cucumberJvm, cucumberScala, scalatest, selenium, pegdown)
+lazy val uiDependencies = logging ++ inCompile(cucumberJvm, cucumberScala, scalatest, selenium, pegdown, cornichon)
 
 libraryDependencies ++= uiDependencies
 mainClass in(Compile, run) := Some("cucumber.api.cli.Main")
