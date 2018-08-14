@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 
 private class TestState {
+  //If using windows you can uncomment this and set the correct location rather than using an ENV variable
+  //System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
   private lazy val webDriver = new ChromeDriver()
 }
 
